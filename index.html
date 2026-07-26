@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#02081d">
+  <meta name="description" content="MillionaireCommerce mentorship booking portal.">
+  <title>Mentorship Portal — MillionaireCommerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <main class="auth-shell">
+    <section class="auth-showcase">
+      <a class="brand auth-brand" href="index.html"><strong>Millionaire</strong><span>Commerce</span></a>
+      <div class="showcase-copy">
+        <p class="eyebrow">EXCLUSIEF LEDENPORTAAL</p>
+        <h1>Plan jouw volgende<br><em>mentorship day.</em></h1>
+        <p>Log in met het e-mailadres dat voor jouw mentorship is geactiveerd, bekijk beschikbare dagen en reserveer direct een sessie.</p>
+      </div>
+      <div class="showcase-features">
+        <article><span>01</span><div><b>Persoonlijke agenda</b><small>Bekijk direct welke momenten beschikbaar zijn.</small></div></article>
+        <article><span>02</span><div><b>Kies je mentor</b><small>Plan een sessie bij Samuel of Ruben.</small></div></article>
+        <article><span>03</span><div><b>Boekingen beheren</b><small>Bekijk en annuleer jouw afspraken vanuit het dashboard.</small></div></article>
+      </div>
+      <div class="auth-orbit orbit-one"></div>
+      <div class="auth-orbit orbit-two"></div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="auth-card">
+        <div class="auth-card-head">
+          <span class="mc-badge">MC</span>
+          <div><p class="eyebrow">WELKOM TERUG</p><h2>Toegang tot je portal</h2></div>
+        </div>
+
+        <form class="auth-form active" id="loginForm" novalidate>
+          <label>
+            Geactiveerd e-mailadres
+            <input type="email" name="email" autocomplete="email" placeholder="naam@voorbeeld.nl" required>
+          </label>
+          <button class="gold-button full" type="submit"><span>Inloggen</span><b>→</b></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="demo-login">
+          <b>Alleen voor actieve leden</b>
+          <span>Je hebt geen registratie of wachtwoord nodig.</span>
+          <span>Het e-mailadres moet vooraf in deze website zijn toegevoegd.</span>
+        </div>
+      </div>
+      <p class="auth-note">Private mentorship portal · MillionaireCommerce</p>
+    </section>
+  </main>
+
+  <script>
+    /* ================================================================
+       ADD OR REMOVE LOGIN EMAILS HERE.
+       Every email must be unique. The name appears in the dashboard.
+       ================================================================ */
+    window.ALLOWED_USERS = [
+      { email: 'demo@millionairecommerce.nl', name: 'Demo Student' },
+      { email: 'ruben@onuha.info', name: 'Ruben' }
+      // Example: { email: 'client@example.com', name: 'Client Name' },
+    ];
+  </script>
+  <script src="auth.js"></script>
+</body>
+</html>

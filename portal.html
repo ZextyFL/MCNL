@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#02081d">
+  <title>Mijn mentorship — MillionaireCommerce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="portal-body">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand side-brand" href="portal.html"><strong>Millionaire</strong><span>Commerce</span></a>
+    <nav class="side-nav">
+      <a class="active" href="#dashboard"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5 12 5l8 6.5"/><path d="M6.5 10.5V19h11v-8.5"/></svg></span>Dashboard</a>
+      <a href="#agenda"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5.5" width="16" height="14" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 9.5h16"/></svg></span>Agenda</a>
+      <a href="#mentoren"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16.5 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-2a3.5 3.5 0 0 0-3.5 3.5V20"/><circle cx="12" cy="8" r="3.25"/><path d="M18.5 7.5a2.5 2.5 0 0 1 0 5M20 20v-1a3 3 0 0 0-2-2.84"/></svg></span>Mentoren</a>
+      <a href="#boekingen"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg></span>Mijn boekingen</a>
+    </nav>
+    <div class="side-help"><span>MC</span><h3>Hulp nodig?</h3><p>Neem contact op met het team wanneer je planning aangepast moet worden.</p><a href="mailto:ruben@onuha.info">Contact opnemen</a></div>
+    <button class="logout-button" id="logoutButton" type="button"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M14 7l5 5-5 5"/><path d="M19 12H9"/><path d="M11 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"/></svg></span>Uitloggen</button>
+  </aside>
+
+  <div class="portal-main">
+    <header class="portal-topbar">
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Menu openen">☰</button>
+      <div><p class="eyebrow">MEMBER DASHBOARD</p><h1 id="welcomeTitle">Welkom.</h1></div>
+      <div class="profile-chip"><span id="profileInitial">M</span><div><b id="profileName">Member</b><small id="profileEmail"></small></div></div>
+    </header>
+
+    <main class="dashboard" id="dashboard">
+      <section class="welcome-banner">
+        <div><p class="eyebrow">JOUW VOLGENDE STAP</p><h2>Plan een mentorship day<br>die jouw merk vooruitbrengt.</h2><p>Kies een mentor, selecteer een beschikbare dag en reserveer jouw persoonlijke sessie.</p><a class="gold-button" href="#agenda"><span>Bekijk de agenda</span><b>→</b></a></div>
+        <div class="banner-mark"><span>MC</span></div>
+        <div class="banner-orbit orbit-a"></div><div class="banner-orbit orbit-b"></div>
+      </section>
+
+      <section class="metrics-grid" aria-label="Overzicht">
+        <article><span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5.5" width="16" height="14" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 9.5h16"/></svg></span><div><small>Komende sessies</small><strong id="upcomingCount">0</strong></div></article>
+        <article><span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16.5 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-2a3.5 3.5 0 0 0-3.5 3.5V20"/><circle cx="12" cy="8" r="3.25"/><path d="M18.5 7.5a2.5 2.5 0 0 1 0 5M20 20v-1a3 3 0 0 0-2-2.84"/></svg></span><div><small>Beschikbare mentoren</small><strong>2</strong></div></article>
+        <article><span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg></span><div><small>Status mentorship</small><strong class="status-text">Actief</strong></div></article>
+      </section>
+
+      <section class="content-section calendar-section" id="agenda">
+        <div class="section-heading"><div><p class="eyebrow">MENTORSHIP CALENDAR</p><h2>Plan je volgende sessie</h2><p>Selecteer eerst een mentor en klik daarna op een beschikbare dag.</p></div><div class="legend"><span><i class="available-dot"></i>Beschikbaar</span><span><i class="booked-dot"></i>Jouw boeking</span></div></div>
+
+        <div class="booking-layout">
+          <div class="mentor-selector" id="mentorSelector">
+            <button type="button" class="mentor-choice active" data-mentor="samuel">
+              <img src="assets/samuel.webp" alt="Samuel Onuha">
+              <span><b>Samuel Onuha</b><small>Brand strategy, positioning & scaling</small></span><i>✓</i>
+            </button>
+            <button type="button" class="mentor-choice" data-mentor="ruben">
+              <img src="assets/ruben-onuha.png" alt="Ruben Onuha">
+              <span><b>Ruben Onuha</b><small>Execution, advertising & systems</small></span><i>✓</i>
+            </button>
+          </div>
+
+          <div class="calendar-card">
+            <div class="calendar-toolbar"><button id="prevMonth" type="button" aria-label="Vorige maand">‹</button><h3 id="monthTitle"></h3><button id="nextMonth" type="button" aria-label="Volgende maand">›</button></div>
+            <div class="weekday-row"><span>MA</span><span>DI</span><span>WO</span><span>DO</span><span>VR</span><span>ZA</span><span>ZO</span></div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+
+          <aside class="day-panel" id="dayPanel">
+            <div class="empty-day"><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5.5" width="16" height="14" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 9.5h16"/></svg></span><h3>Kies een dag</h3><p>Beschikbare tijden verschijnen hier.</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="content-section" id="mentoren">
+        <div class="section-heading"><div><p class="eyebrow">ONZE EXPERTS</p><h2>Ontmoet je mentoren</h2></div></div>
+        <div class="portal-mentor-grid">
+          <article class="portal-mentor-card">
+            <div class="mentor-image"><img src="assets/samuel.webp" alt="Samuel Onuha"><span>MENTOR</span></div>
+            <div class="mentor-copy"><p class="eyebrow">LEAD MENTOR &amp; MEDEOPRICHTER</p><h3>Samuel Onuha</h3><p>Gerichte mentorship voor merkstrategie, aanbod, creatives en schaalbare groei.</p><div class="mentor-meta"><span>Focus</span><b>Brand strategy, positioning &amp; scaling</b></div><button class="outline-button choose-mentor" type="button" data-mentor="samuel">Plan bij Samuel →</button></div>
+          </article>
+          <article class="portal-mentor-card">
+            <div class="mentor-image"><img src="assets/ruben-onuha.png" alt="Ruben Onuha"><span>MENTOR</span></div>
+            <div class="mentor-copy"><p class="eyebrow">OPRICHTER, MILLIONAIRECOMMERCE</p><h3>Ruben Onuha</h3><p>Praktische begeleiding rond uitvoering, advertenties, processen en dagelijkse groei.</p><div class="mentor-meta"><span>Focus</span><b>Execution, advertising &amp; systems</b></div><button class="outline-button choose-mentor" type="button" data-mentor="ruben">Plan bij Ruben →</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="boekingen">
+        <div class="section-heading"><div><p class="eyebrow">MIJN PLANNING</p><h2>Aankomende boekingen</h2><p>Bekijk of annuleer je geplande mentorship sessies.</p></div></div>
+        <div class="bookings-list" id="bookingsList"></div>
+      </section>
+    </main>
+    <footer class="portal-footer"><a class="brand" href="portal.html"><strong>Millionaire</strong><span>Commerce</span></a><span>Private mentorship portal</span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal" hidden>
+    <div class="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Sluiten">×</button>
+      <p class="eyebrow">BEVESTIG JE SESSIE</p><h2 id="modalTitle">Mentorship boeken</h2>
+      <div class="modal-summary" id="modalSummary"></div>
+      <label>Waar wil je tijdens deze sessie aan werken?<textarea id="bookingTopic" maxlength="180" placeholder="Bijvoorbeeld: productstrategie, advertenties of opschalen..."></textarea></label>
+      <button class="gold-button full" id="confirmBooking" type="button"><span>Boeking bevestigen</span><b>→</b></button>
+      <p class="form-message" id="modalMessage" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="portal.js"></script>
+</body>
+</html>
