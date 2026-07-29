@@ -1,6 +1,12 @@
 (() => {
-  const user = readCurrentUser();
+  const sessionUser = readCurrentUser();
+  const clientProfiles = Array.isArray(window.MC_USERS) ? window.MC_USERS : [];
+  const user = sessionUser
+    ? clientProfiles.find(profile => String(profile.email).trim().toLowerCase() === String(sessionUser.email).trim().toLowerCase())
+    : null;
+
   if (!user) {
+    localStorage.removeItem('mc_current_user');
     window.location.replace('index.html');
     return;
   }
@@ -94,6 +100,71 @@
     $('#profileInitial').textContent = firstName.charAt(0).toUpperCase();
     $('#profileName').textContent = user.name;
     $('#profileEmail').textContent = user.email;
+  }
+
+  function formatProjectDate(dateString) {
+    if (!dateString) return 'Nog niet gepland';
+    const date = new Date(`${dateString}T12:00:00`);
+    if (Number.isNaN(date.getTime())) return dateString;
+    return new Intl.DateTimeFormat('nl-NL', {day: 'numeric', month: 'long', year: 'numeric'}).format(date);
+  }
+
+  function renderStoreProfile() {
+    const store = user.store || {};
+    const updates = Array.isArray(user.updates) ? user.updates : [];
+    const storeName = String(store.name || store.shopifyName || 'Mijn webshop');
+    const progress = Math.max(0, Math.min(100, Number(store.progress) || 0));
+    const status = String(store.status || 'In ontwikkeling');
+    const revenueGoal = String(store.dailyRevenueGoal || '€10.000 omzet per dag');
+
+    $('#storeBannerTitle').innerHTML = `Bouw ${escapeHtml(storeName)}<br>richting €10K per dag.`;
+    $('#storeBannerText').textContent = `Volg hier de Shopify-opbouw, voortgang en updates. Het gezamenlijke trajectdoel is ${revenueGoal}.`;
+    $('#storeProgressMetric').textContent = `${progress}%`;
+    $('#storeStatusMetric').textContent = status;
+    $('#storeGoalMetric').textContent = '€10K per dag';
+    $('#storeName').textContent = storeName;
+    $('#storeLogo').textContent = storeName.split(/\s+/).filter(Boolean).slice(0, 2).map(word => word[0]).join('').toUpperCase() || 'S';
+    $('#storeStatus').textContent = status;
+    $('#storeProgressText').textContent = `${progress}%`;
+    $('#storeProgressBar').style.width = `${progress}%`;
+    $('#shopifyName').textContent = store.shopifyName || storeName;
+    $('#shopifyDomain').textContent = store.myshopifyDomain || 'Nog niet toegevoegd';
+    $('#customDomain').textContent = store.customDomain || 'Nog niet gekoppeld';
+    $('#storeNiche').textContent = store.niche || 'Nog niet ingevuld';
+    $('#storeRevenueGoal').textContent = revenueGoal;
+    $('#storeLaunchDate').textContent = formatProjectDate(store.launchDate);
+    $('#updatesDescription').textContent = `Persoonlijke updates voor ${storeName}, gekoppeld aan ${user.email}.`;
+
+    const storefrontLink = $('#storefrontLink');
+    const storefrontUrl = String(store.storefrontUrl || '').trim();
+    if (/^https?:\/\//i.test(storefrontUrl)) {
+      storefrontLink.href = storefrontUrl;
+      storefrontLink.hidden = false;
+    } else {
+      storefrontLink.hidden = true;
+      storefrontLink.removeAttribute('href');
+    }
+
+    const updatesContainer = $('#storeUpdates');
+    if (!updates.length) {
+      updatesContainer.innerHTML = '<div class="empty-store-updates"><span>□</span><h3>Nog geen webshopupdates</h3><p>Nieuwe voortgang wordt hier voor deze klant toegevoegd.</p></div>';
+      return;
+    }
+
+    const statusLabels = {
+      done: 'Afgerond',
+      in_progress: 'Bezig',
+      planned: 'Gepland'
+    };
+
+    updatesContainer.innerHTML = updates
+      .slice()
+      .sort((a, b) => String(a.date).localeCompare(String(b.date)))
+      .map(update => {
+        const updateStatus = ['done', 'in_progress', 'planned'].includes(update.status) ? update.status : 'planned';
+        return `<article class="store-update ${updateStatus}"><div class="update-marker"><i></i></div><div class="update-card"><div class="update-meta"><span>${escapeHtml(formatProjectDate(update.date))}</span><b>${statusLabels[updateStatus]}</b></div><h3>${escapeHtml(update.title || 'Webshop update')}</h3><p>${escapeHtml(update.description || '')}</p></div></article>`;
+      })
+      .join('');
   }
 
   function selectMentor(id, scroll = false) {
@@ -308,6 +379,7 @@
   $$('.side-nav a').forEach(link => link.addEventListener('click', () => document.body.classList.remove('sidebar-open')));
 
   setProfile();
+  renderStoreProfile();
   refreshBookings();
   renderCalendar();
   renderBookings();
