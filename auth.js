@@ -17,7 +17,7 @@
     if (!form.reportValidity()) return;
 
     const email = form.email.value.trim().toLowerCase();
-    const allowedUsers = Array.isArray(window.ALLOWED_USERS) ? window.ALLOWED_USERS : [];
+    const allowedUsers = Array.isArray(window.MC_USERS) ? window.MC_USERS : [];
     const user = allowedUsers.find(account => String(account.email).trim().toLowerCase() === email);
 
     button.disabled = true;
