@@ -91,52 +91,73 @@ window.MC_USERS = [
     ]
   },
 
-  {
-    email: 'hamzaaich70@gmail.com',
-    name: 'Hamza Aich',
-    store: {
-      name: 'AICH AMSTERDAM',
-      shopifyName: 'AICH AMSTERDAM',
-      myshopifyDomain: 'Nog niet toegevoegd',
-      customDomain: 'aich-amsterdam.com',
-      storefrontUrl: 'https://aich-amsterdam.com/',
-      niche: 'Fashion',
-      status: 'Webshop wordt gebouwd',
-      progress: 25,
-      dailyRevenueGoal: '€10.000 omzet per dag',
-      launchDate: ''
-    },
-    updates: [
-      {
-        date: '2026-07-29',
-        title: 'Project aangemaakt',
-        description:
-          'Het persoonlijke webshopproject voor AICH AMSTERDAM is toegevoegd aan de portal.',
-        status: 'done'
-      },
-      {
-        date: '2026-07-29',
-        title: 'Webshopnaam en domein ingesteld',
-        description:
-          'De webshopnaam is ingesteld op AICH AMSTERDAM en aich-amsterdam.com is gekoppeld aan het dashboard.',
-        status: 'done'
-      },
-      {
-        date: '2026-07-30',
-        title: 'Design en homepage',
-        description:
-          'De visuele stijl, header en homepage-secties worden voorbereid.',
-        status: 'in_progress'
-      },
-      {
-        date: '2026-08-02',
-        title: 'Producten toevoegen',
-        description:
-          'Producten, collecties en productpagina’s worden na het design toegevoegd.',
-        status: 'planned'
-      }
-    ]
+{
+  email: 'hamzaaich70@gmail.com',
+  name: 'Hamza Aich',
+  store: {
+    name: 'AICH AMSTERDAM',
+    shopifyName: 'AICH AMSTERDAM',
+    myshopifyDomain: 'Nog niet toegevoegd',
+    customDomain: 'aich-amsterdam.com',
+    storefrontUrl: 'https://aich-amsterdam.com/',
+    niche: 'Fashion',
+    status: 'Bijna klaar voor lancering',
+    progress: 75,
+    dailyRevenueGoal: '€10.000 omzet per dag',
+    launchDate: '2026-08-07'
   },
+  updates: [
+    {
+      date: '2026-07-29',
+      title: 'Project en domein gekoppeld',
+      description:
+        'Het persoonlijke webshopproject is aangemaakt en aich-amsterdam.com is gekoppeld aan het dashboard.',
+      status: 'done'
+    },
+    {
+      date: '2026-07-31',
+      title: 'Homepage en branding afgerond',
+      description:
+        'De visuele stijl, header, homepage en belangrijkste branding-elementen zijn afgerond.',
+      status: 'done'
+    },
+    {
+      date: '2026-08-01',
+      title: 'Collecties en productpagina’s opgebouwd',
+      description:
+        'De belangrijkste collecties, productpagina’s en navigatie zijn toegevoegd en ingericht.',
+      status: 'done'
+    },
+    {
+      date: '2026-08-02',
+      title: 'Betalingen en verzendinstellingen',
+      description:
+        'De betaalmethoden, verzendzones en belangrijkste Shopify-instellingen zijn ingesteld.',
+      status: 'done'
+    },
+    {
+      date: '2026-08-03',
+      title: 'Laatste controles voor lancering',
+      description:
+        'De mobiele weergave, checkout, productinformatie en technische werking worden momenteel gecontroleerd.',
+      status: 'in_progress'
+    },
+    {
+      date: '2026-08-05',
+      title: 'Advertenties en tracking voorbereiden',
+      description:
+        'De advertentieaccounts, tracking en campagnestructuur worden voorbereid voor de eerste bezoekers en verkopen.',
+      status: 'planned'
+    },
+    {
+      date: '2026-08-07',
+      title: 'Webshop lanceren',
+      description:
+        'Na de laatste controles wordt AICH AMSTERDAM gelanceerd en kan het opschalen richting het dagelijkse omzetdoel beginnen.',
+      status: 'planned'
+    }
+  ]
+},
 
   {
     email: 'rdmartilia@icloud.com',
