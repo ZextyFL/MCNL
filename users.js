@@ -91,73 +91,73 @@ window.MC_USERS = [
     ]
   },
 
-{
-  email: 'hamzaaich70@gmail.com',
-  name: 'Hamza Aich',
-  store: {
-    name: 'AICH AMSTERDAM',
-    shopifyName: 'AICH AMSTERDAM',
-    myshopifyDomain: 'Nog niet toegevoegd',
-    customDomain: 'aich-amsterdam.com',
-    storefrontUrl: 'https://aich-amsterdam.com/',
-    niche: 'Fashion',
-    status: 'Bijna klaar voor lancering',
-    progress: 75,
-    dailyRevenueGoal: '€10.000 omzet per dag',
-    launchDate: '2026-08-07'
+  {
+    email: 'hamzaaich70@gmail.com',
+    name: 'Hamza Aich',
+    store: {
+      name: 'AICH AMSTERDAM',
+      shopifyName: 'AICH AMSTERDAM',
+      myshopifyDomain: 'Nog niet toegevoegd',
+      customDomain: 'aich-amsterdam.com',
+      storefrontUrl: 'https://aich-amsterdam.com/',
+      niche: 'Fashion',
+      status: 'Bijna klaar voor lancering',
+      progress: 75,
+      dailyRevenueGoal: '€10.000 omzet per dag',
+      launchDate: '2026-08-07'
+    },
+    updates: [
+      {
+        date: '2026-07-29',
+        title: 'Project en domein gekoppeld',
+        description:
+          'Het persoonlijke webshopproject is aangemaakt en aich-amsterdam.com is gekoppeld aan het dashboard.',
+        status: 'done'
+      },
+      {
+        date: '2026-07-31',
+        title: 'Homepage en branding afgerond',
+        description:
+          'De visuele stijl, header, homepage en belangrijkste branding-elementen zijn afgerond.',
+        status: 'done'
+      },
+      {
+        date: '2026-08-01',
+        title: 'Collecties en productpagina’s opgebouwd',
+        description:
+          'De belangrijkste collecties, productpagina’s en navigatie zijn toegevoegd en ingericht.',
+        status: 'done'
+      },
+      {
+        date: '2026-08-02',
+        title: 'Betalingen en verzendinstellingen',
+        description:
+          'De betaalmethoden, verzendzones en belangrijkste Shopify-instellingen zijn ingesteld.',
+        status: 'done'
+      },
+      {
+        date: '2026-08-03',
+        title: 'Laatste controles voor lancering',
+        description:
+          'De mobiele weergave, checkout, productinformatie en technische werking worden momenteel gecontroleerd.',
+        status: 'in_progress'
+      },
+      {
+        date: '2026-08-05',
+        title: 'Advertenties en tracking voorbereiden',
+        description:
+          'De advertentieaccounts, tracking en campagnestructuur worden voorbereid voor de eerste bezoekers en verkopen.',
+        status: 'planned'
+      },
+      {
+        date: '2026-08-07',
+        title: 'Webshop lanceren',
+        description:
+          'Na de laatste controles wordt AICH AMSTERDAM gelanceerd en kan het opschalen richting het dagelijkse omzetdoel beginnen.',
+        status: 'planned'
+      }
+    ]
   },
-  updates: [
-    {
-      date: '2026-07-29',
-      title: 'Project en domein gekoppeld',
-      description:
-        'Het persoonlijke webshopproject is aangemaakt en aich-amsterdam.com is gekoppeld aan het dashboard.',
-      status: 'done'
-    },
-    {
-      date: '2026-07-31',
-      title: 'Homepage en branding afgerond',
-      description:
-        'De visuele stijl, header, homepage en belangrijkste branding-elementen zijn afgerond.',
-      status: 'done'
-    },
-    {
-      date: '2026-08-01',
-      title: 'Collecties en productpagina’s opgebouwd',
-      description:
-        'De belangrijkste collecties, productpagina’s en navigatie zijn toegevoegd en ingericht.',
-      status: 'done'
-    },
-    {
-      date: '2026-08-02',
-      title: 'Betalingen en verzendinstellingen',
-      description:
-        'De betaalmethoden, verzendzones en belangrijkste Shopify-instellingen zijn ingesteld.',
-      status: 'done'
-    },
-    {
-      date: '2026-08-03',
-      title: 'Laatste controles voor lancering',
-      description:
-        'De mobiele weergave, checkout, productinformatie en technische werking worden momenteel gecontroleerd.',
-      status: 'in_progress'
-    },
-    {
-      date: '2026-08-05',
-      title: 'Advertenties en tracking voorbereiden',
-      description:
-        'De advertentieaccounts, tracking en campagnestructuur worden voorbereid voor de eerste bezoekers en verkopen.',
-      status: 'planned'
-    },
-    {
-      date: '2026-08-07',
-      title: 'Webshop lanceren',
-      description:
-        'Na de laatste controles wordt AICH AMSTERDAM gelanceerd en kan het opschalen richting het dagelijkse omzetdoel beginnen.',
-      status: 'planned'
-    }
-  ]
-},
 
   {
     email: 'rdmartilia@icloud.com',
@@ -295,6 +295,60 @@ window.MC_USERS = [
         title: 'Collecties en producten',
         description:
           'De productcollecties en productpagina’s worden na de basisopbouw toegevoegd.',
+        status: 'planned'
+      }
+    ]
+  },
+
+  {
+    email: 'veliniovanwamel@icloud.com',
+    name: 'Velinio',
+    store: {
+      name: 'VELINIO AMSTERDAM',
+      shopifyName: 'VELINIO AMSTERDAM',
+      myshopifyDomain: 'Nog niet toegevoegd',
+      customDomain: 'Nog niet gekoppeld',
+      storefrontUrl: '',
+      niche: 'Fashion',
+      status: 'Project gestart',
+      progress: 10,
+      dailyRevenueGoal: '€10.000 omzet per dag',
+      launchDate: ''
+    },
+    updates: [
+      {
+        date: '2026-08-04',
+        title: 'Persoonlijk project aangemaakt',
+        description:
+          'Het persoonlijke webshopproject voor VELINIO AMSTERDAM is toegevoegd aan het mentorship-portaal.',
+        status: 'done'
+      },
+      {
+        date: '2026-08-04',
+        title: 'Webshopnaam ingesteld',
+        description:
+          'De Shopify webshopnaam is ingesteld op VELINIO AMSTERDAM.',
+        status: 'done'
+      },
+      {
+        date: '2026-08-04',
+        title: 'Branding en webshopstructuur voorbereiden',
+        description:
+          'De visuele richting, navigatie, homepage en basisstructuur van de webshop worden momenteel voorbereid.',
+        status: 'in_progress'
+      },
+      {
+        date: '2026-08-06',
+        title: 'Collecties en productpagina’s',
+        description:
+          'Na de basisopbouw worden de collecties, producten en productpagina’s toegevoegd.',
+        status: 'planned'
+      },
+      {
+        date: '2026-08-08',
+        title: 'Betaalmethoden en verzendinstellingen',
+        description:
+          'De betaalmethoden, verzendzones en overige Shopify-instellingen worden ingesteld en getest.',
         status: 'planned'
       }
     ]
